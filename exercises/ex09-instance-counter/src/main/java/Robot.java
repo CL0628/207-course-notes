@@ -3,7 +3,7 @@
  *
  * A <em>static</em> field belongs to the class and is shared by every object; an
  * <em>instance</em> field belongs to each individual object. Here, every Robot
- * shares one counter of how many Robots have been made, while each Robot has its
+ *  * shares one counter of how many Robots have been made, while each Robot has its
  * own id and name. Complete the constructor and getters below. Edit only this
  * file.
  *
@@ -29,8 +29,9 @@ public class Robot {
   public Robot(String name) {
     // TODO: set this.name; set this.id to the current value of count (so the
     //       first Robot gets id 0); then increase count by 1.
-    this.id = 0;
-    this.name = null;
+    this.id = count;
+    count += 1;
+    this.name = name;
   }
 
   /**
@@ -40,7 +41,7 @@ public class Robot {
    */
   public static int getCount() {
     // TODO
-    return 0;
+    return count;
   }
 
   /**
@@ -50,7 +51,7 @@ public class Robot {
    */
   public int getId() {
     // TODO
-    return 0;
+    return this.id;
   }
 
   /**
@@ -60,6 +61,6 @@ public class Robot {
    */
   public String getName() {
     // TODO
-    return null;
+    return this.name;
   }
 }
